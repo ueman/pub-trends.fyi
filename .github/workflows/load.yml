@@ -3,7 +3,7 @@ name: load
 on:
   push
 
-job:
+jobs:
   load:
   runs-on: ubuntu-latest
   defaults:
