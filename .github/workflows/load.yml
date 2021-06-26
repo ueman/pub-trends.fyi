@@ -15,4 +15,4 @@ jobs:
         with:
           dotnet-version: '3.1.x'
       - run: dotnet build PubTrends.csproj
-      - run: dotnet ${{GITHUB_WORKSPACE}}/bin/Debug/netcoreapp3.1/PubTrends.dll ${{GITHUB_WORKSPACE}}/../packages.txt ${{GITHUB_WORKSPACE}}/../docs/pub.db
+      - run: dotnet ${GITHUB_WORKSPACE}/bin/Debug/netcoreapp3.1/PubTrends.dll ${GITHUB_WORKSPACE}/../packages.txt ${GITHUB_WORKSPACE}/../docs/pub.db
