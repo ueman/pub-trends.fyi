@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <title>Pub Trends 📈</title>
+
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📈</text></svg>">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Language" content="en">
+    <meta name="description" content="Pub Trends 📈">
+    <meta name="og:description" content="Pub Trends 📈">
+    <meta name="og:title" content="Pub Trends 📈">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.3.2/dist/chart.min.js"></script>
+    <style>
+        .stats {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="px-3 py-2 bg-dark text-white">
+            <div class="container">
+                <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+                    <a href="/"
+                        class="d-flex align-items-center my-2 my-lg-0 me-lg-auto text-white text-decoration-none">
+                        <span class="h2">Pub Trends 📈</span>
+                    </a>
+
+                    <ul class="nav col-12 col-lg-auto my-2 justify-content-center my-md-0 text-small">
+                        <li>
+                            <a href="https://twitter.com/ue_man" class="nav-link text-primary">
+                                Follow me on Twitter
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://github.com/ueman/pub-trends.fyi" class="nav-link text-primary">
+                                Visit GitHub Repo
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="container">
+
+        <div id="stats" class="stats">
+            <h1 id="packageName"></h1>
+
+            <div style="margin-left: 10%; margin-right: 10%;">
+                <h3>Popularity</h3>
+                <canvas id="popularity" width="400" height="400"></canvas>
+
+                <h3>Likes</h3>
+                <canvas id="likes" width="400" height="400"></canvas>
+
+                <h3>Points</h3>
+                <canvas id="points" width="400" height="400"></canvas>
+            </div>
+        </div>
+
+        <div class="placeholder" id="placeholder">
+            <h1>Search for a package</h1>
+        </div>
+    </div>
+</body>
+<script src="src/index.js"></script>
+<script src="src/tool.js?foo"></script>
+</html>

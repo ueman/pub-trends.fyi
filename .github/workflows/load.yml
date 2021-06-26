@@ -1,0 +1,14 @@
+
+job:
+  load:
+  runs-on: ubuntu-latest
+  defaults:
+      run:
+        working-directory: pub-trends-cli
+  steps:
+    - uses: actions/checkout@v2
+    - uses: actions/setup-dotnet@v1
+      with:
+        dotnet-version: '3.1.x'
+    - run: dotnet build PubTrends.csproj
+    - run: $GITHUB_WORKSPACE/bin/Debug/netcoreapp3.1/PubTrends.dll

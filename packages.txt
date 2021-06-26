@@ -1,0 +1,15 @@
+feedback
+splash
+screen_recorder
+unleash
+application_icon
+drawable
+sentry
+sentry_flutter
+provider
+bloc
+flutter_bloc
+share_plus
+package_info_plus
+device_info_plus
+lumberdash
