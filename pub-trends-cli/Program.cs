@@ -10,8 +10,10 @@ namespace PubTrends
     {
         static async Task Main(string[] args)
         {
-            var packagesTxt = args[0]; // "/Users/jonas/Documents/projects/pub-trends.fyi/packages.txt"
-            var pubDb = args[1]; // Path.Combine("/Users/jonas/Documents/projects/pub-trends.fyi/docs", "pub.db")
+            var packagesTxt = Environment.GetEnvironmentVariable("PACKAGES") ?? "/Users/jonas/Documents/projects/pub-trends.fyi/packages.txt";
+            var pubDb = Environment.GetEnvironmentVariable("DATABASE") ?? Path.Combine("/Users/jonas/Documents/projects/pub-trends.fyi/docs", "pub.db");
+            Console.WriteLine($"Package path: {packagesTxt}");
+            Console.WriteLine($"Databse path: {pubDb}");
             Console.WriteLine($"Starting");
             var pubClient = new PubClient();
             var db = CreateDatabase(pubDb);
