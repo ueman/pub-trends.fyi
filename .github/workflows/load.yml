@@ -10,8 +10,8 @@ jobs:
         run:
           working-directory: pub-trends-cli
     env:
-      PACKAGES: ${GITHUB_WORKSPACE}/../packages.txt
-      DATABASE: ${GITHUB_WORKSPACE}/../docs/pub.db
+      PACKAGES: $GITHUB_WORKSPACE/../packages.txt
+      DATABASE: $GITHUB_WORKSPACE/../docs/pub.db
     steps:
       - uses: actions/checkout@v2
       - uses: actions/setup-dotnet@v1
