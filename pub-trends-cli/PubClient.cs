@@ -7,13 +7,13 @@ namespace PubTrends
 {
     public class PubClient {
         private const string _version = "0.0.1";
-        private const string _site = "https://pub-trends.dev";
+        private const string _site = "https://pub-trends.fyi";
 
         private HttpClient _client;
 
         public PubClient() {
             _client = new HttpClient();
-            _client.DefaultRequestHeaders.TryAddWithoutValidation("User-Agent", $"pub-trends.dev/{_version} (+{_site})");
+            _client.DefaultRequestHeaders.TryAddWithoutValidation("User-Agent", $"pub-trends.fyi/{_version} (+{_site})");
         }
 
 
