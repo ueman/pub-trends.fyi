@@ -10,8 +10,15 @@ namespace PubTrends
     {
         static async Task Main(string[] args)
         {
-            var packagesTxt = Environment.GetEnvironmentVariable("PACKAGES") ?? "/Users/jonas/Documents/projects/pub-trends.fyi/packages.txt";
-            var pubDb = Environment.GetEnvironmentVariable("DATABASE") ?? Path.Combine("/Users/jonas/Documents/projects/pub-trends.fyi/docs", "pub.db");
+            var packagesTxt = "/Users/jonas/Documents/projects/pub-trends.fyi/packages.txt";
+            var pubDb = Path.Combine("/Users/jonas/Documents/projects/pub-trends.fyi/docs", "pub.db");
+
+            var ci = Environment.GetEnvironmentVariable("CI");
+            if (ci != null)
+            {
+                pubDb = Path.Combine(Environment.GetEnvironmentVariable("GITHUB_WORKSPACE"), "docs/pub.db");
+                packagesTxt = Path.Combine(Environment.GetEnvironmentVariable("GITHUB_WORKSPACE"), "packages.txt");
+            }
             Console.WriteLine($"Package path: {packagesTxt}");
             Console.WriteLine($"Databse path: {pubDb}");
             Console.WriteLine($"Starting");
@@ -21,7 +28,8 @@ namespace PubTrends
             Console.WriteLine($"Starting to load package information");
             foreach (var package in packages)
             {
-                if(string.IsNullOrWhiteSpace(package)){
+                if (string.IsNullOrWhiteSpace(package))
+                {
                     continue;
                 }
                 try
