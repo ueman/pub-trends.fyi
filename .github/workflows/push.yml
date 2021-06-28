@@ -1,8 +1,7 @@
-name: load
+name: ci
 
 on:
-  schedule:
-    - cron:  '0 6 * * *'
+  push
 
 jobs:
   load:
@@ -15,13 +14,7 @@ jobs:
       DATABASE: $GITHUB_WORKSPACE/../docs/pub.db
     steps:
       - uses: actions/checkout@v2
-        with:
-          ref: ${{ github.head_ref }}
       - uses: actions/setup-dotnet@v1
         with:
           dotnet-version: '3.1.x'
-      - uses: stefanzweifel/git-auto-commit-action@v4
-        with:
-          commit_message: Automated Pub Trends DB Update
-          file_pattern: '*.db'
       - run: dotnet run PubTrends.csproj
