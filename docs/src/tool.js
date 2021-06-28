@@ -43,9 +43,13 @@ async function load(package) {
     wasmUrl.toString()
   );
 
-  const result = await worker.db.query(`SELECT Likes, Popularity, Points, ReadAt FROM Metrics WHERE PackageName = '${package}' ORDER BY ReadAt ASC`);
+  const result = await worker.db.query(`SELECT Likes, Popularity, Points, date(ReadAt) FROM Metrics WHERE PackageName = '${package}' ORDER BY ReadAt ASC`);
 
   console.log(result);
+
+  if(result.length == 0) {
+    return;
+  }
 
   var likes = result.map(it => it.Likes);
   var popularity = result.map(it => it.Popularity * 100);
