@@ -55,9 +55,6 @@ async function load(package) {
   createChart('likes', likes, dates);
   createChart('popularity', popularity, dates);
   createChart('points', points, dates);
-
-  document.getElementById('stats').style.display = 'block';
-  document.getElementById('placeholder').style.display = 'none';
 }
 
 function setTitle(package) {

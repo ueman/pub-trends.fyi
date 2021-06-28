@@ -16,11 +16,6 @@
     <meta name="og:description" content="Pub Trends 📈">
     <meta name="og:title" content="Pub Trends 📈">
     <script src="https://cdn.jsdelivr.net/npm/chart.js@3.3.2/dist/chart.min.js"></script>
-    <style>
-        .stats {
-            display: none;
-        }
-    </style>
 </head>
 
 <body>
@@ -60,7 +55,7 @@
         </div>
     </header>
     <div class="container">
-        <div class="placeholder" id="placeholder">
+        <div>
             <h1>Search for a package by adding <code>?p={package_name}</code> to the URL</h1>
             <p>Here are some examples:</p>
             <ul>
@@ -72,7 +67,7 @@
             </ul>
             <p>Available packages are listed <a href="https://github.com/ueman/pub-trends.fyi/blob/master/packages.txt"></a>here.</p>
         </div>
-        <div id="stats" class="stats">
+        <div>
             <h1 id="packageName"></h1>
 
             <div style="margin-left: 10%; margin-right: 10%;">
