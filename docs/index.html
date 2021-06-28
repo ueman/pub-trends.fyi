@@ -60,7 +60,18 @@
         </div>
     </header>
     <div class="container">
-
+        <div class="placeholder" id="placeholder">
+            <h1>Search for a package by adding <code>?p={package_name}</code> to the URL</h1>
+            <p>Here are some examples:</p>
+            <ul>
+                <li><a href="https://pub-trends.fyi/?p=feedback"><code>https://pub-trends.fyi/?p=feedback</code></a>
+                </li>
+                <li><a href="https://pub-trends.fyi/?p=splash"><code>https://pub-trends.fyi/?p=splash</code></a></li>
+                <li><a href="https://pub-trends.fyi/?p=sentry_flutter"><code>https://pub-trends.fyi/?p=sentry_flutter</code></a>
+                </li>
+            </ul>
+            <p>Available packages are listed <a href="https://github.com/ueman/pub-trends.fyi/blob/master/packages.txt"></a>here.</p>
+        </div>
         <div id="stats" class="stats">
             <h1 id="packageName"></h1>
 
@@ -75,12 +86,9 @@
                 <canvas id="points" width="400" height="400"></canvas>
             </div>
         </div>
-
-        <div class="placeholder" id="placeholder">
-            <h1>Search for a package by adding <code>?p=<package_name></code> to the URL</h1>
-        </div>
     </div>
 </body>
 <script src="src/index.js"></script>
 <script src="src/tool.js?foo"></script>
+
 </html>

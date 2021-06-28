@@ -47,10 +47,6 @@ async function load(package) {
 
   console.log(result);
 
-  if(result.length == 0) {
-    return;
-  }
-
   var likes = result.map(it => it.Likes);
   var popularity = result.map(it => it.Popularity * 100);
   var points = result.map(it => it.Points);
