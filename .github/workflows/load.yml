@@ -2,7 +2,7 @@ name: load
 
 on:
   schedule:
-    - cron:  '0 6 * * *'
+    - cron:  '0 7 * * *'
 
 jobs:
   load:
@@ -20,8 +20,8 @@ jobs:
       - uses: actions/setup-dotnet@v1
         with:
           dotnet-version: '3.1.x'
+      - run: dotnet run PubTrends.csproj
       - uses: stefanzweifel/git-auto-commit-action@v4
         with:
           commit_message: Automated Pub Trends DB Update
           file_pattern: '*.db'
-      - run: dotnet run PubTrends.csproj
