@@ -32,3 +32,4 @@ flutter_markdown
 palette_generator
 webview_flutter
 path_provider
+feedback_gitlab
