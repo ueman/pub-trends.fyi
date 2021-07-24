@@ -33,3 +33,14 @@ palette_generator
 webview_flutter
 path_provider
 feedback_gitlab
+sign_in_with_apple
+firebase_core
+firebase_database
+firebase_auth
+cloud_firestore
+firebase_messaging
+firebase_storage
+firebase_analytics
+firebase_dynamic_links
+cloud_functions
+firebase_crashlytics
